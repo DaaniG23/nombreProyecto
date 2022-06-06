@@ -1,0 +1,12 @@
+aside {
+    text-decoration: underline;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.menu {
+    font-size: large;
+    margin: 1rem;
+}
+.menu ul {
+    padding: 1rem;
+}
