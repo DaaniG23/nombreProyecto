@@ -1,0 +1,24 @@
+<form [formGroup]="formularioPersona" (ngSubmit)="null" class="formulario">
+    <div class="row mb-3 form-group">
+      <label for="inputName3" class="col-sm-2 col-form-label">Nombre</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control nombre" placeholder="Inserte su nombre" formControlName="nombre" required>
+        <span class="text-black" *ngIf="formularioPersona.get('nombre')?.errors?.['minlength']">Número mínimo de caracteres es 5</span>
+      </div>
+    </div>
+    <div class="row mb-3 form-group">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control nombre" placeholder="Inserte su correo" formControlName="email" required>
+        <span class="text-black" *ngIf="formularioPersona.get('email')?.errors?.['email']">Debe ser un email válido</span>
+      </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputZip" class="col-sm-2 col-form-label">Mensaje</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control nombre" placeholder="Escriba aquí su consulta" formControlName="mensaje" required>
+        </div>
+      </div>
+    <button type="submit" class="btn btn-primary" [disabled]="formularioPersona.invalid" (click)="mostrarFormularui()">Enviar</button>
+    <span class="text-black m-1" *ngIf="formularioPersona.get('mensaje')?.errors?.['required']">Para enviar, debe completar todos los campos</span>
+  </form>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AsideComponent } from './components/aside/aside.component';
@@ -9,6 +9,8 @@ import { HorarioClasesComponent } from './components/horario-clases/horario-clas
 import { DirectiveDirective } from './shared/directive.directive';
 import { FooterComponent } from './components/footer/footer.component';
 import { DatePipe } from '@angular/common';
+import { FormularioInicioComponent } from './components/formulario-inicio/formulario-inicio.component';
+
 
 @NgModule({
   declarations: [
@@ -19,9 +21,12 @@ import { DatePipe } from '@angular/common';
     HorarioClasesComponent,
     DirectiveDirective,
     FooterComponent,
+    FormularioInicioComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+.nombre {
+    width: 75%;
+}
+.formulario {
+    display: block;
+    padding: 4px;
+    border: solid black;
+    border-radius: 10px;
+    width: 30rem;
+    margin-left: auto;
+}
